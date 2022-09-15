@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    --primary-color-cyan: hsl(158, 36%, 37%);
+    --primary-color-cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--primary-color-cream);
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 520px;
+}
+
+.card .card_header {
+    width: 250px;
+    content: url("../Product preview card component/product-preview-card-component-main/images/image-product-desktop.jpg");
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: black;
+}
+
+.card .card_body .perfume_text,
+.card .card_body .product_description,
+.card .card_body .add_cart .add_cart_text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card .card_body .product_title,
+.card .card_body .product_price_place .product_price_now {
+    font-family: 'Fraunces', serif;
+}
+
+
+.card .card_body .perfume_text,
+.card .card_body .product_description,
+.card .card_body .product_price_place .product_price_after {
+    color: var(--Dark-grayish-blue);
+}
+
+
+.card .card_body {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card .card_body .perfume_text {
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.card .card_body .product_title {
+    margin: 7px 0px 12px 0px;
+}
+
+.card .card_body .product_description {
+    font-size: 13px;
+    margin-bottom: 25px;
+    line-height: 20px;
+}
+
+.card .card_body .product_price_place {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card .card_body .product_price_place .product_price_now {
+    color: var(--primary-color-cyan);
+    border: none;
+}
+
+.card .card_body .product_price_place .product_price_after {
+    text-decoration: line-through;
+}
+
+.card .card_body .add_cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    background-color: var(--primary-color-cyan);
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 10px;
+    transition: all 400ms;
+}
+
+.card .card_body .add_cart .add_cart_text {
+    color: var(--White);
+}
+
+.card .card_body .add_cart:hover {
+    transform: translate(1px, -1px);
+    box-shadow: -5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    background-color: hsl(158, 35%, 44%);
+}
+
+@media(max-width: 768px) {
+    .container {
+        height: min-content;
+    }
+
+    .card {
+        /* width: 100%; */
+        flex-direction: column;
+        margin: 30px 15px 30px 15px;
+        border-radius: 10px;
+    }
+    
+    .card .card_header {
+        width: 100%;
+        content: url("../Product preview card component/product-preview-card-component-main/images/image-product-mobile.jpg");
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        background-color: black;
+    }
+    
+    .card .card_body .perfume_text,
+    .card .card_body .product_description,
+    .card .card_body .add_cart .add_cart_text {
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .card .card_body .product_title,
+    .card .card_body .product_price_place .product_price_now {
+        font-family: 'Fraunces', serif;
+    }
+    
+    
+    .card .card_body .perfume_text,
+    .card .card_body .product_description,
+    .card .card_body .product_price_place .product_price_after {
+        color: var(--Dark-grayish-blue);
+    }
+    
+    
+    .card .card_body {
+        background-color: #fff;
+        padding: 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .card .card_body .perfume_text {
+        letter-spacing: 4px;
+        font-size: 11px;
+    }
+    
+    .card .card_body .product_title {
+        margin: 7px 0px 12px 0px;
+    }
+    
+    .card .card_body .product_description {
+        font-size: 13px;
+        margin-bottom: 25px;
+        line-height: 20px;
+    }
+    
+    .card .card_body .product_price_place {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .card .card_body .product_price_place .product_price_now {
+        color: var(--primary-color-cyan);
+        border: none;
+    }
+    
+    .card .card_body .product_price_place .product_price_after {
+        text-decoration: line-through;
+    }
+    
+    .card .card_body .add_cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        background-color: var(--primary-color-cyan);
+        padding: 15px;
+        margin-top: 12px;
+        border-radius: 10px;
+    }
+    
+    .card .card_body .add_cart .add_cart_text {
+        color: var(--White);
+    }
+}

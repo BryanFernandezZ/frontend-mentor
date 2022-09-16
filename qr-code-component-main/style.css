@@ -67,3 +67,28 @@ body {
     color: hsl(220, 15%, 55%);
     font-weight: 400;
 }
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution {
+    width: 100%;
+    padding: 15px 0px;
+    text-align: center;
+    color: hsl(220, 15%, 55%);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+.attribution a {
+    color: #0000ff;
+    text-decoration: none;
+    transition: color 300ms;
+}
+
+.attribution a:hover {
+    color: #8484ff;
+}

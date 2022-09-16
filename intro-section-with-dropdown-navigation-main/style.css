@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.664);
+    z-index: 1;
+    transition: all 300ms;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+}
+
+.logo,
+.open_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 25px;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    width: 55%;
+    background-color: #fff;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms;
+    z-index: 100;
+}
+
+.navbar .close_menu {
+    padding: 30px 25px;
+}
+
+.navbar .navbar_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.navbar .navbar_items .item {
+    padding: 15px 20px;
+}
+
+.navbar .navbar_items .item .item_title {
+    display: flex;
+    align-items: center;
+    color: hsl(0, 0%, 41%);
+}
+
+.navbar .navbar_items .item .item_title .dropdown_svg {
+    margin-left: 10px;
+}
+
+.navbar .navbar_items .item a {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+
+.navbar .close_menu {
+    display: flex;
+    justify-content: end;
+    text-align: end;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#item_1,
+#item_2 {
+    cursor: pointer;
+}
+
+#list_1,
+#list_2 {
+    transition: all 300ms;
+}
+
+.navbar .navbar_items .item ul {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.navbar .navbar_items .item ul li {
+    list-style-type: none;
+}
+
+.navbar .navbar_items .item ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.navbar .navbar_items .item ul li a svg {
+    margin-right: 10px;
+}
+
+.navbar .navbar_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .navbar_buttons .login,
+.navbar .navbar_buttons .register {
+    padding: 10px 40px;
+    font-size: 16px;
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 10px;
+}
+
+.navbar .navbar_buttons .register {
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 10px;
+}
+
+/*MAIN*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .main_header .main_image .image {
+    content: url("./images/image-hero-mobile.png");
+    width: 100%;
+}
+
+.main .main_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.main .main_body .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+    color: hsl(0, 0%, 8%);
+}
+
+.main .main_body .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: hsl(0, 0%, 41%);
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 1px;
+    padding: 0px 20px;
+}
+
+.main .main_body .button {
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.main .main_body .clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 50px 0px 20px 0px;
+}
+
+.main .main_body .clients div {
+    margin: 10px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: hsl(0, 0%, 8%);
+    bottom: 0;
+}
+
+footer .attribution {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .attribution a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 960px) {
+    #close_menu,
+    #open_menu {
+        display: none;
+    }
+
+    .container {
+        height: 100vh;
+    }
+
+    header {
+        padding: 0px;
+        height: 20vh;
+    }
+
+    .logo {
+        padding-right: 30px;
+    }
+
+    .logo,
+    .navbar_buttons {
+        margin: 0px 50px;
+    }
+
+    .navbar {
+        position: relative;
+        opacity: 1;
+        pointer-events: all;
+        height: unset;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .navbar .navbar_items {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar .navbar_buttons {
+        justify-content: end;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .navbar .navbar_buttons .login,
+    .navbar .navbar_buttons .register {
+        margin-bottom: 0px;
+    }
+
+    .main {
+        flex-direction: row;
+        width: 100%;
+        height: 70vh;
+    }
+
+    .main .main_header {
+        padding-right: 100px;
+        order: 1;
+    }
+
+    .main .main_header .main_image .image {
+        width: 100%;
+        content: url("./images/image-hero-desktop.png");
+    }
+    
+    .main .main_body {
+        height: 100%;
+        padding: 0px 100px;
+        align-items: flex-start;
+    }
+
+    .main .main_body .title {
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+        padding: 0px;
+        font-size: 70px;
+    }
+
+    .main .main_body .title,
+    .main .main_body .content {
+        text-align: start;
+        height: 70%;
+    }
+
+    .main .main_body .content {
+        font-size: 20px;
+        padding: 0px;
+    }
+
+    .main .main_body .button {
+        margin: 0px;
+        padding: 20px 40px;
+    }
+
+    .main .main_body .clients {
+        justify-content: start;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        padding: 0px;
+    }
+
+    footer .attribution {
+        flex-direction: row;
+    }
+}
